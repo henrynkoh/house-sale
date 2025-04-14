@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 부동산 데이터 분석기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .header {
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="text-center">네이버 부동산 데이터 분석기</h1>
+        </div>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>API 요청 설정</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ url_for('fetch_data') }}" method="post">
+                            <div class="mb-3">
+                                <label for="complex_id" class="form-label">복합 ID</label>
+                                <input type="text" class="form-control" id="complex_id" name="complex_id" value="97" required>
+                                <div class="form-text">아파트 단지 ID를 입력하세요</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="trade_type" class="form-label">거래 유형</label>
+                                <select class="form-select" id="trade_type" name="trade_type">
+                                    <option value="A1" selected>A1 (매매)</option>
+                                    <option value="B1">B1 (전세)</option>
+                                    <option value="B2">B2 (월세)</option>
+                                    <option value="B3">B3 (단기임대)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="year" class="form-label">연도</label>
+                                <input type="number" class="form-control" id="year" name="year" value="5" min="1" max="20">
+                                <div class="form-text">가져올 데이터의 연도 범위</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="area_no" class="form-label">지역 번호</label>
+                                <input type="text" class="form-control" id="area_no" name="area_no" value="2">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="data_type" class="form-label">데이터 타입</label>
+                                <select class="form-select" id="data_type" name="data_type">
+                                    <option value="summary" selected>요약 (summary)</option>
+                                    <option value="table">테이블 (table)</option>
+                                    <option value="real">실거래가 (real)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary">데이터 가져오기</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                {% if data_exists %}
+                <div class="d-grid gap-2 mt-3">
+                    <a href="{{ url_for('view_data') }}" class="btn btn-secondary">저장된 데이터 보기</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
