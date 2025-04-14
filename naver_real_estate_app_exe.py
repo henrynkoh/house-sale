@@ -3,11 +3,14 @@ import sys
 import json
 import requests
 import webbrowser
-from flask import Flask, render_template, request, jsonify, redirect, url_for, flash
+from flask import Flask, render_template, request, jsonify, redirect, url_for, flash, make_response
 import threading
 import socket
 import time
 from werkzeug.serving import make_server
+import pandas as pd
+import io
+from datetime import datetime
 
 # Find an available port
 def find_free_port():
@@ -300,90 +303,62 @@ def view_data():
         flash(f'데이터를 표시하는 중 오류가 발생했습니다: {str(e)}', 'error')
         return redirect(url_for('index'))
 
-# Download route for saving data as CSV or Excel file
-@app.route('/download/<format>')
+@app.route('/download-data/<format>')
 def download_data(format):
+    """
+    데이터를 다운로드 하는 엔드포인트
+    :param format: 다운로드 포맷 (csv, excel)
+    :return: 파일 다운로드 응답
+    """
+    if 'data' not in session:
+        flash('다운로드할 데이터가 없습니다.', 'danger')
+        return redirect(url_for('index'))
+    
     try:
-        import pandas as pd
-        from flask import send_file
-        from io import BytesIO
+        data = session['data']
+        if not data:
+            flash('다운로드할 데이터가 없습니다.', 'danger')
+            return redirect(url_for('view_data'))
         
-        data_path = os.path.join(data_dir, 'response_data.json')
-        if not os.path.exists(data_path):
-            flash('다운로드할 데이터가 없습니다', 'error')
-            return redirect(url_for('index'))
-            
-        with open(data_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            
-        # Extract and build dataframe
-        table_data = []
+        # 데이터프레임 생성
+        df = pd.DataFrame(data)
         
-        # Try to find price data in different data structures
-        if 'realPriceOnMonthList' in data:
-            for month_data in data['realPriceOnMonthList']:
-                if 'itemList' in month_data:
-                    month = month_data.get('month', '')
-                    year = month_data.get('year', '')
-                    
-                    for item in month_data['itemList']:
-                        item_data = {
-                            'year': year,
-                            'month': month,
-                        }
-                        
-                        # Copy all data from item
-                        for key, value in item.items():
-                            item_data[key] = value
-                        
-                        table_data.append(item_data)
-        
-        elif 'average' in data:
-            for avg_data in data['average']:
-                table_data.append(avg_data)
-        
-        # If no data was parsed, create a simple sample
-        if not table_data:
-            table_data = [
-                {'year': '2025', 'month': '04', 'dealPrice': '85,000', 'area': '84.51', 'floor': '12', 'dealType': '매매'},
-                {'year': '2025', 'month': '03', 'dealPrice': '84,500', 'area': '84.51', 'floor': '8', 'dealType': '매매'},
-                {'year': '2025', 'month': '02', 'dealPrice': '83,800', 'area': '84.51', 'floor': '15', 'dealType': '매매'},
-                {'year': '2024', 'month': '12', 'dealPrice': '82,500', 'area': '84.51', 'floor': '10', 'dealType': '매매'},
-                {'year': '2024', 'month': '09', 'dealPrice': '81,200', 'area': '84.51', 'floor': '7', 'dealType': '매매'},
-                {'year': '2024', 'month': '06', 'dealPrice': '80,000', 'area': '84.51', 'floor': '5', 'dealType': '매매'},
-            ]
-        
-        # Convert to dataframe
-        df = pd.DataFrame(table_data)
-        
-        output = BytesIO()
+        # 현재 시간을 파일명에 추가
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         
         if format == 'csv':
-            df.to_csv(output, encoding='utf-8-sig', index=False)
-            mimetype = 'text/csv'
-            filename = 'naver_real_estate_data.csv'
-            output.seek(0)
-            return send_file(output, 
-                            mimetype=mimetype, 
-                            download_name=filename, 
-                            as_attachment=True)
+            # CSV 파일로 변환
+            csv_data = df.to_csv(index=False, encoding='utf-8-sig')
+            output = make_response(csv_data)
+            output.headers["Content-Disposition"] = f"attachment; filename=naver_real_estate_data_{timestamp}.csv"
+            output.headers["Content-type"] = "text/csv"
+            return output
             
         elif format == 'excel':
-            df.to_excel(output, index=False, engine='openpyxl')
-            mimetype = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-            filename = 'naver_real_estate_data.xlsx'
-            output.seek(0)
-            return send_file(output, 
-                            mimetype=mimetype, 
-                            download_name=filename, 
-                            as_attachment=True)
-        
+            # 엑셀 파일로 변환
+            excel_buffer = io.BytesIO()
+            df.to_excel(excel_buffer, index=False, engine='openpyxl')
+            excel_buffer.seek(0)
+            
+            response = make_response(excel_buffer.getvalue())
+            response.headers["Content-Disposition"] = f"attachment; filename=naver_real_estate_data_{timestamp}.xlsx"
+            response.headers["Content-type"] = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            return response
+            
+        elif format == 'json':
+            # JSON 파일로 변환
+            json_data = df.to_json(orient='records', force_ascii=False)
+            response = make_response(json_data)
+            response.headers["Content-Disposition"] = f"attachment; filename=naver_real_estate_data_{timestamp}.json"
+            response.headers["Content-type"] = "application/json"
+            return response
+            
         else:
-            flash('지원되지 않는 형식입니다', 'error')
+            flash('지원하지 않는 포맷입니다.', 'danger')
             return redirect(url_for('view_data'))
-    
+            
     except Exception as e:
-        flash(f'데이터 다운로드 중 오류가 발생했습니다: {str(e)}', 'error')
+        flash(f'다운로드 중 오류가 발생했습니다: {str(e)}', 'danger')
         return redirect(url_for('view_data'))
 
 class ServerThread(threading.Thread):

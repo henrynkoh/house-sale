@@ -1,0 +1,264 @@
+{
+  "requests": [
+    {
+      "url": "https://s.update.adsrvr.org/2/2.164.0/357427/A2iCq_MQCGlvaJOY/postback",
+      "method": "POST",
+      "headers": {
+        "Accept": "*/*",
+        "Accept-Language": "en-US,en;q=0.9,ko-KR;q=0.8,ko;q=0.7",
+        "Connection": "keep-alive",
+        "Content-Type": "text/plain",
+        "Origin": "https://c4f0ea3431e8de25c6d7e735fcac6b31.safeframe.googlesyndication.com",
+        "Referer": "https://c4f0ea3431e8de25c6d7e735fcac6b31.safeframe.googlesyndication.com/",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "cross-site",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": "\"Android\""
+      },
+      "params": {
+        "ti": "d4a99078-11c4-43cc-bac3-66cf4e32c3d3",
+        "ap": "",
+        "r7": "",
+        "md": "1",
+        "ui": "6c27cc08-d886-4086-8bc4-46148dbe3433",
+        "pv": "d491e9f6-7ac8-48a5-82d1-3b4f7fb69a86",
+        "de": "2",
+        "dt": "3574271504888517674019",
+        "ac": "3ungibk",
+        "sr": "redfin",
+        "ci": "357427",
+        "pd": "avt",
+        "pp": "1",
+        "dm": "300x250",
+        "cb": "1744610159",
+        "di": "www.redfin.com",
+        "to": "3",
+        "sid": "A2iCq_MQCGlvaJOY",
+        "oz_sc": "315994a1ab4533379b7f0691",
+        "oz_df": "1744610176516",
+        "oz_l": "67",
+        "cv": "3"
+      },
+      "data": "2GAM]0)P=lUId+kng*A:8J*veO`m`hDfV(0~zDv>Xc>]Zv%.U};T5Kjt/{%?$T5JnmzWpF4"
+    },
+    {
+      "url": "https://www.redfin.com/rift",
+      "method": "POST",
+      "cookies": {
+        "RF_BROWSER_ID": "vqphmBV4QcigaMd2RB2ioQ",
+        "RF_BROWSER_ID_GREAT_FIRST_VISIT_TIMESTAMP": "2025-04-13T22%3A55%3A23.711750",
+        "RF_BID_UPDATED": "1",
+        "RF_TRAFFIC_SEGMENT": "non-organic",
+        "_fbp": "fb.1.1744610125224.490601769389566425",
+        "__pdst": "9b81830c62af4ba199f702ad36024638",
+        "_scor_uid": "9ab66513eddf41dba8412a8144be84c9",
+        "_tt_enable_cookie": "1",
+        "_ttp": "01JRSDVSRJYJ9E5F3A8JNYPD87_.tt.1",
+        "_gcl_au": "1.1.1238145804.1744610126",
+        "audS": "t"
+      },
+      "headers": {
+        "accept": "*/*",
+        "accept-language": "en-US,en;q=0.9,ko-KR;q=0.8,ko;q=0.7",
+        "origin": "https://www.redfin.com",
+        "priority": "u=4, i",
+        "referer": "https://www.redfin.com/zipcode/98092",
+        "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": "\"Android\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "no-cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
+      },
+      "params": {
+        "bv": "2",
+        "1744610177491": "",
+        "12": "",
+        "ev": "web",
+        "ss": "SMALL",
+        "p": "map",
+        "__s": "rift-decoder",
+        "a": "impression",
+        "s": "header_widget",
+        "t": "nav_menu_button",
+        "sr": "1920x1080",
+        "vp": "585x0",
+        "ts": "1744610173495",
+        "rf": "vqphmBV4QcigaMd2RB2ioQ",
+        "me": "1744610173495",
+        "0": "",
+        "0_dup": ""
+      }
+    },
+    {
+      "url": "https://event-ingestor.judy.pnap.aditude.cloud/v1/",
+      "method": "POST",
+      "headers": {
+        "accept": "*/*",
+        "accept-language": "en-US,en;q=0.9,ko-KR;q=0.8,ko;q=0.7",
+        "content-type": "text/plain;charset=UTF-8",
+        "origin": "https://www.redfin.com",
+        "priority": "u=1, i",
+        "referer": "https://www.redfin.com/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": "\"Android\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "cross-site",
+        "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
+      },
+      "data": {
+        "batch": [
+          {
+            "eventType": "slotRequested",
+            "targetingMap": {},
+            "slotId": "db-playwire-map-many-page-results-ad",
+            "slotElementId": "db-playwire-map-many-page-results-ad",
+            "outOfPage": false,
+            "adUnitPath": "/23150241437/Redfin_Search/Brokerage_Pagination_Small_Desktop",
+            "adServer": "googletag",
+            "dataSource": null,
+            "userId": "gLV7ZVXEv-wP",
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
+            "thirdPartyCookies": true,
+            "screenResolution": "1920x1080",
+            "osVersion": "10.15.7",
+            "os": "Mac OS",
+            "geo": {
+              "time-zone": "America/Los_Angeles",
+              "postal-code": "98055",
+              "country-region": "WA",
+              "country": "US",
+              "city": "Renton",
+              "asn": "21928",
+              "address": "2607:fb90:eca7:59:e98f:d8f1:775a:49c1"
+            },
+            "custom": {
+              "param7": "test",
+              "param8": "rise-enabled",
+              "param6": "test",
+              "param3": ""
+            },
+            "browserDateBatched": 1744610173610,
+            "pageviewId": "717d512e-6ff2-4592-9a6d-b388000877f9"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://pagead2.googlesyndication.com/pagead/ping",
+      "method": "POST",
+      "headers": {
+        "accept": "*/*",
+        "accept-language": "en-US,en;q=0.9,ko-KR;q=0.8,ko;q=0.7",
+        "content-type": "text/plain;charset=UTF-8",
+        "origin": "https://www.redfin.com",
+        "priority": "u=1, i",
+        "referer": "https://www.redfin.com/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": "\"Android\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "no-cors",
+        "sec-fetch-site": "cross-site",
+        "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36",
+        "x-client-data": "CIe2yQEIprbJAQipncoBCKyBywEIk6HLAQiSo8sBCIagzQEI0OjOAQ=="
+      },
+      "params": {
+        "e": "1"
+      },
+      "data": "[[],[4,\"m202504090101\"],[[{\"1\":[\"TOkNxc\",null,[null,1],[[null,null,0],[null,null,0],[null,null,0]]]}]]]"
+    },
+    {
+      "url": "https://c4f0ea3431e8de25c6d7e735fcac6b31.safeframe.googlesyndication.com/safeframe/1-0-41/html/container.html",
+      "method": "GET",
+      "headers": {
+        "Referer": "https://www.redfin.com/",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": "\"Android\""
+      }
+    },
+    {
+      "url": "https://ad.doubleclick.net/pcs/view",
+      "method": "GET",
+      "cookies": {
+        "ar_debug": "1",
+        "receive-cookie-deprecation": "1",
+        "IDE": "AHWqTUmwAAgr5Qnh-pm8ofA1GpQffVBM_-s_slyy_aGTO6Hzeefe-fccNJ0CdOoABY4",
+        "APC": "AfxxVi4wAJ8s2Dvdow7GviGI-PTpaQvE5uFv_SA9xgs5LqxQGT2Vhg"
+      },
+      "headers": {
+        "accept": "*/*",
+        "accept-language": "en-US,en;q=0.9,ko-KR;q=0.8,ko;q=0.7",
+        "attribution-reporting-eligible": "not-navigation-source, not-trigger, event-source",
+        "attribution-reporting-support": "web",
+        "priority": "u=1, i",
+        "referer": "https://c4f0ea3431e8de25c6d7e735fcac6b31.safeframe.googlesyndication.com/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": "\"Android\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "no-cors",
+        "sec-fetch-site": "cross-site",
+        "sec-fetch-storage-access": "active",
+        "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36",
+        "x-client-data": "CIe2yQEIprbJAQipncoBCKyBywEIk6HLAQiSo8sBCIagzQEI0OjOAQ=="
+      },
+      "params": {
+        "xai": "AKAOjsvHybHJJLngrXPo_b6Du1ljhUoPgCzU4FkAjVtAZ73MyX6uadyJgJ_cMGAcSbD-zbuK6B47MtuCIf4VyoNTIxFlKWloLBUm1q1QNtC1SolwIIvtCCd3eSI4XpUu9sfq3_3iBOTcG1el9vaND44d8XZo4-j9BpbCmbiQ2_4Ps9qPjBL0njJdZXHpdT134ozASQSK99272yjwVYyy0F6mm9NJMjwxLU5p-FtdQ8UllmjguNHf37TEOD_XMl2que9OcCh_nq_y4mOtFwnsYz5RxLHPeJp-CB1eypm9CV23-043TRlCtnjZVH6yF-YRfB-VtCnFThiLlha7YJk7GAzAjDWeayk9zmTaNr_-2A4HtNeq9KuJ_Cdklycu4ht7opDtfRpJIhKQ5EZui2ZG8OeK9qyQ6t8caz5gGndQU9JARI7xBLhUyjV7VVu00Qu2-bUBdZbvcIRU-r6ggSFoq9gmEMOklKmJ4TjB6Ph-fXHzN0rPPKG-Mx9OkK9WdrN-0_GT2P26xy42ztzElzelsIvG_vVU8bcVFP7-eNdrbNg0HB-9gGeAULgC4IPIGrpeDH6B371WIyosXWE_Cwlcuw6AapkFtZwTl55WnQIcG-2eKaQD70uiLYDtygG-2wIflqZPhlwr7jckbAJgFLtKvfo1eRIFwPD5fyj6QdgzbP1xVUfKWoFLk6zcVPoMy7iqScpUXCmddxFI2WsVObtqQY14FXHelpis5Nfod6xO0chQV0wz0zfZOiL0FmaMmTOXpefTDdM9WuhSkJIxBdTLcPjg5eUmOCkO-spsKs8aDbQnAnxjKvdiE0DytWlRPxGXYJy6rhztqMoqlU7jTvS_uNOsN_8B45UnGKGBve4SM0XXYyBYHNWSuYCWrpvypVwkwcpqHrsHudV8Uh3RturFqd7x971-QCqq0WdY2SI0Jz-F7iundtDgTKXx7pnf0uBJtc7ZhmxBXzcFtMpicKPBcw34zZOe_cTTtdGSQxI3qCycnzSY0gFREkiiOYq-Lzez2IYI41VXKwdGVuiId60r7NEimHQFrHlK97ikIciOQbAYSaaD7DNpL5j_ivgiA0VOKZEEc92TSfE37MrlSJ17dJG92u58whG6fNOBDmejAX-3IGPtWGy-Tzy0KdCvrB_LW0FSEYRYFm0ihCGfC7RC-z85zFX3DS5loEZWkcWgqk4HqVGGwM-bZWeea4-MM8Qc47lDgxv4TB5vcc6tJYE2eZPU9Wu0ECNyg-myM7iykLv32aVOUi7_KgPHkZvrTNGH9nPY2Zk44hw3N4ZQdL2x_8n0zfpMR-NFYmoisRadH6gRShhNn0biiD643FeiKqIc9CaFvB11TTpkJMzEvbcHt0_3fuPaKBIniMXqaS0UjYYexDO6CHjGYzwBYDhQvn665DNqmrwexQ5FOqH4SLiR1rUaPuEHp5t1LC5VMJpEXeJZ7VxmNsUe-__QSX_ywcfAUEAyQRkL9KxV670Wvsdmyhq5svJmV2VGMVRkxtsJ_exgUmb5N52dbE_SOF0f0QpXTPLHCX6ECJIhu8RxnmwOXSm_2pXFXq3Hx3FEPUcG6DnjyJV-_ozQB5tp2IordohHKPqYYmVWUPn3QjS60SENk_8nnz0OwhRp3spFQptCtVkFtS-Csuie99mfr_GW35-BwlENowLu_HZ5kjKQtOQyWWY_k9ihLEKyyY1YRl5kbBtORhlB9cUV17o-0VunzLay_GsXqjqIeR8fMFYpwb3iGAX9g3oo77Gar8SC89PI8TD_40gZiWW-ew",
+        "sai": "AMfl-YSOy8V6bPSejGzcRb-j8zg7Q1eT_b8kY_3yLGJt3umrwqKubI3S7IKzWJxyc3fHl7rJbFXyvYzNqxmmZxdhYRSRjGKLjetXy5ZnXDOs1ZUt7IXDYSWhGWDAA59DKihFtcvJ_mDaes6Kw0_H237IvSntmZL6oLjLVeViQ4eME17EqXGv7VT-yd_G7bf7e0IyEmOAVLtdBnZHPEccIyND7VLo8MnxUjUiG5V4UqwhtyteBns_ywbXHtT58v5juqMvxNbf3diZV2jb7f693WcQu8K9OBeWYWOS-pNGIz6mk5k84W2B-yMRg-QwKqLImBO7Q7Z7siVJS8JvoghctwdBiravmPWNxwiWs7a9I2wkNoo6TNx6R3VMlT0sXv_4iU23uTCHsQ25rKKKCnZudhAhdNoxq1MBerb8xAEHPr7qOkSr_N7U",
+        "sig": "Cg0ArKJSzNmeWRwXaWbtEAE",
+        "uach_m": "[UACH]",
+        "crd": "aHR0cHM6Ly92aXN0YXByaW50LmNvbQ",
+        "pr": "missingexchangepricemacro",
+        "fbs_aeid": "[gw_fbsaeid]",
+        "urlfix": "1",
+        "omid": "0",
+        "rm": "1",
+        "ctpt": "436",
+        "cbvp": "1",
+        "cstd": "419",
+        "cisv": "r20250410.58511",
+        "uach": "WyJBbmRyb2lkIiwiNi4wIiwiIiwiTmV4dXMgNSIsIjEzNS4wLjcwNDkuODUiLG51bGwsMSxudWxsLCI2NCIsW1siR29vZ2xlIENocm9tZSIsIjEzNS4wLjcwNDkuODUiXSxbIk5vdC1BLkJyYW5kIiwiOC4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxMzUuMC43MDQ5Ljg1Il1dLDBd",
+        "arae": "1",
+        "ftch": "1",
+        "adurl": ""
+      }
+    },
+    {
+      "url": "https://ade.googlesyndication.com/ddm/activity/dc_oe=ChMIvte9revWjAMV9NC4CB1IgQhtEAEYACDY54du",
+      "method": "GET",
+      "headers": {
+        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+        "accept-language": "en-US,en;q=0.9,ko-KR;q=0.8,ko;q=0.7",
+        "priority": "i",
+        "referer": "https://c4f0ea3431e8de25c6d7e735fcac6b31.safeframe.googlesyndication.com/",
+        "sec-ch-ua": "\"Google Chrome\";v=\"135\", \"Not-A.Brand\";v=\"8\", \"Chromium\";v=\"135\"",
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": "\"Android\"",
+        "sec-fetch-dest": "image",
+        "sec-fetch-mode": "no-cors",
+        "sec-fetch-site": "same-site",
+        "sec-fetch-storage-access": "active",
+        "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36",
+        "x-client-data": "CIe2yQEIprbJAQipncoBCKyBywEIk6HLAQiSo8sBCIagzQEI0OjOAQ=="
+      },
+      "params": {
+        "dc_eps": "AHas8cAuNmED7yOTmG2QeJNwTMxR93ye9Ihd3cCoH1LIQHW_7d7-SMGB597ujtL6AoYSJXeDvbSW3njMcEsyEhUllnU",
+        "met": "1",
+        "timestamp": "1744610199645",
+        "eid1": "2",
+        "ecn1": "0",
+        "etm1": "10"
+      }
+    }
+  ]
+} 
